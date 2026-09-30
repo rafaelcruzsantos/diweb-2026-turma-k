@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form>
+        <h1>Novos tipos de input</h1>
+
+        <fieldset>
+            <legend>Número e telefone</legend>
+
+            <label for="numero">Número</label>
+            <input type="text" name="numero" id="numero"
+                min="7" max="10" value="1" autofocus>
+
+            <label for="telefone">Telefone</label>
+            <input type="tel" name="telefone" id="telefone"
+                placeholder="(61) 9.9999-9999">
+        </fieldset>
+
+        <fieldset>
+            <legend>Data e hora</legend>
+
+            <label for="data">Data de nascimento</label>
+            <input type="date" name="data" id="data"
+                value="2026-04-04" min="2026-04-01">
+
+            <label for="hora">Hora início</label>
+            <input type="time" name="hora" id="hora">
+            <label for="datahora">Data e hora</label>
+<input type="datetime-local" name="datahora" id="datahora">
+
+<label for="semana">Semana</label>
+<input type="week" name="semana" id="semana">
+
+<label for="mês">Mês</label>
+<input type="month" name="mês" id="mês">
+
+</fieldset>
+
+<fieldset>
+    <legend>Outros</legend>
+
+    <label for="cor">Cor</label>
+    <input type="color" name="cor" id="cor">
+
+    <label for="search">Busca</label>
+    <input type="search" name="search" id="search">
+
+    <label for="url">URL</label>
+    <input type="url" name="url" id="url">
+
+    <label for="ranger">Range</label>
+    <input type="range" name="ranger" id="ranger" min="0" max="100" value="50">
+
+</fieldset>
+
+<input type="submit" value="Enviar" class="button">
+<input type="reset" value="Limpar" class="button">
+</form>
+</body>
+</html>
+
+
+ 
