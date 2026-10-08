@@ -13,7 +13,7 @@ echo "Nota atualizada do aluno: {$notaAluno}";
 
 $notas = [7.5, 7.0, 8.5, 5.0, 9.0, 6.0];
 
-$aprovados =$array_filter($notas, function (float $nota): bool {
+$aprovados = $array_filter($notas, function (float $nota): bool {
     return $nota >= 6.0;
 });
 
