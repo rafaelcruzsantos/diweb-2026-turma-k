@@ -138,7 +138,7 @@ function multiplicar($n1,$n2)
 //$n1=8;
 //$n2=40;
 $resultadomultiplicacao=$n1*$n2;
-echo "O resultado da subtração de dois números é: ",$resultadomultiplicacao,"<br>";
+echo "O resultado da multiplicação de dois números é: ",$resultadomultiplicacao,"<br>";
 }
 multiplicar(44,433);
 
@@ -147,7 +147,7 @@ function dividir($n1,$n2)
 //$n1=8;
 //$n2=40;
 $resultadodivisao=$n1/$n2;
-echo "O resultado da subtração de dois números é: ",$resultadodivisao,"<br>";
+echo "O resultado da divisão de dois números é: ",$resultadodivisao,"<br>";
 }
 dividir(894,244);
 ?>
