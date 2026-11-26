@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Jaqueta">
+  <path d="M60 36 L88 28 L100 46 L112 28 L140 36 L180 90 L160 160 L140 154 L140 176 L60 176 L60 154 L40 160 L20 90 Z" fill="#8ba1b8" stroke="#2f3a2b" stroke-width="4" stroke-linejoin="round"/>
+  <line x1="100" y1="46" x2="100" y2="176" stroke="#2f3a2b" stroke-width="3"/>
+  <rect x="68" y="110" width="22" height="24" rx="3" fill="none" stroke="#2f3a2b" stroke-width="3"/>
+  <rect x="110" y="110" width="22" height="24" rx="3" fill="none" stroke="#2f3a2b" stroke-width="3"/>
+</svg>
