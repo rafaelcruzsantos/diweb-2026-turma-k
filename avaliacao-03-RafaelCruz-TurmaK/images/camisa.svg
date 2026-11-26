@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Camisa">
-  <path d="M60 40 L90 30 Q100 48 110 30 L140 40 L176 76 L153 96 L140 86 L140 172 L60 172 L60 86 L47 96 L24 76 Z" fill="#fbf6ee" stroke="#2f3a2b" stroke-width="4" stroke-linejoin="round"/>
-  <path d="M90 30 L100 62 L110 30" fill="none" stroke="#2f3a2b" stroke-width="4" stroke-linejoin="round"/>
-  <line x1="100" y1="62" x2="100" y2="172" stroke="#2f3a2b" stroke-width="3"/>
-  <circle cx="100" cy="90" r="3" fill="#b5532f"/><circle cx="100" cy="115" r="3" fill="#b5532f"/><circle cx="100" cy="140" r="3" fill="#b5532f"/>
-</svg>
