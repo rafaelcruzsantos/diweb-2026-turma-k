@@ -1,0 +1,706 @@
+/* ==========================================================
+   Linho & Lume — Folha de estilos global
+   Paleta: terracota, creme, oliva escuro e areia
+   ========================================================== */
+
+/* ---------- Variáveis (paleta e medidas) ---------- */
+:root {
+  --terracota: #b5532f;
+  --terracota-escuro: #8f3f22;
+  --creme: #f7f0e6;
+  --areia: #e6d6bf;
+  --oliva: #2f3a2b;
+  --oliva-claro: #4b5a45;
+  --texto: #2a2a26;
+  --branco: #ffffff;
+  --raio: 14px;
+  --sombra: 0 8px 24px rgba(47, 58, 43, 0.12);
+  --fonte-titulo: "Fraunces", Georgia, serif;
+  --fonte-texto: "Inter", Arial, sans-serif;
+}
+
+/* ---------- Reset básico ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fonte-texto);
+  color: var(--texto);
+  background: var(--creme);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3 {
+  font-family: var(--fonte-titulo);
+  line-height: 1.2;
+  color: var(--oliva);
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin-inline: auto;
+}
+
+/* ---------- Botões ---------- */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
+  border: 2px solid var(--terracota);
+  background: var(--terracota);
+  color: var(--branco);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+  background: var(--terracota-escuro);
+  border-color: var(--terracota-escuro);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--terracota);
+}
+
+.btn-outline:hover {
+  color: var(--branco);
+}
+
+/* ---------- Cabeçalho e navegação ---------- */
+.site-header {
+  background: var(--oliva);
+  color: var(--creme);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.logo span {
+  color: var(--terracota);
+  font-style: italic;
+  padding: 0 0.15rem;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.main-nav a {
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.main-nav a:hover,
+.main-nav a.ativo {
+  border-color: var(--terracota);
+}
+
+.main-nav .nav-destaque {
+  background: var(--terracota);
+  padding: 0.4rem 1.1rem;
+  border-radius: 999px;
+  border: none;
+}
+
+/* ---------- Hero (banner principal) ---------- */
+.hero {
+  background:
+    linear-gradient(120deg, rgba(47, 58, 43, 0.92), rgba(181, 83, 47, 0.75)),
+    repeating-linear-gradient(45deg, var(--oliva) 0 12px, var(--oliva-claro) 12px 24px);
+  color: var(--creme);
+  padding: 5rem 0;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero h1 {
+  color: var(--creme);
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 48ch;
+}
+
+.hero .selo {
+  display: inline-block;
+  background: var(--areia);
+  color: var(--oliva);
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hero-arte {
+  background: var(--areia);
+  border-radius: 200px 200px var(--raio) var(--raio);
+  padding: 2rem;
+  box-shadow: var(--sombra);
+}
+
+.hero-arte img {
+  margin-inline: auto;
+  max-height: 320px;
+}
+
+.hero .btn-outline {
+  color: var(--creme);
+  border-color: var(--creme);
+  margin-left: 0.6rem;
+}
+
+.hero .btn-outline:hover {
+  background: var(--creme);
+  color: var(--oliva);
+}
+
+/* ---------- Seções gerais ---------- */
+.secao {
+  padding: 4rem 0;
+}
+
+.secao-escura {
+  background: var(--areia);
+}
+
+.secao-titulo {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.secao-titulo h2 {
+  font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+}
+
+.secao-titulo p {
+  color: var(--oliva-claro);
+}
+
+/* ---------- Grade de cards ---------- */
+.grade {
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.card {
+  background: var(--branco);
+  border-radius: var(--raio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card-img {
+  padding: 1.5rem;
+  display: grid;
+  place-items: center;
+  height: 210px;
+}
+
+.card-img img {
+  height: 100%;
+}
+
+.fundo-1 { background: #e9c9b6; }
+.fundo-2 { background: #c9d3bf; }
+.fundo-3 { background: #ead9a8; }
+.fundo-4 { background: #cfc3b3; }
+
+.card-corpo {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.card-corpo h3 {
+  font-size: 1.15rem;
+}
+
+.categoria {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--terracota);
+  font-weight: 600;
+}
+
+.preco {
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-top: auto;
+}
+
+.preco small {
+  font-weight: 400;
+  color: var(--oliva-claro);
+  text-decoration: line-through;
+  margin-left: 0.4rem;
+}
+
+.card .btn {
+  text-align: center;
+  margin-top: 0.8rem;
+  padding: 0.6rem 1rem;
+}
+
+/* ---------- Categorias (home) ---------- */
+.categoria-card {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: var(--raio);
+  background: var(--branco);
+  box-shadow: var(--sombra);
+}
+
+.categoria-card h3 {
+  margin-bottom: 0.3rem;
+}
+
+/* ---------- Faixa de oferta ---------- */
+.oferta {
+  background: var(--terracota);
+  color: var(--creme);
+  text-align: center;
+  padding: 3.5rem 1rem;
+}
+
+.oferta h2 {
+  color: var(--creme);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.oferta p {
+  margin: 0.8rem 0 1.5rem;
+}
+
+.oferta .btn {
+  background: var(--creme);
+  color: var(--terracota);
+  border-color: var(--creme);
+}
+
+/* ---------- Depoimentos ---------- */
+.depoimento {
+  background: var(--branco);
+  border-left: 5px solid var(--terracota);
+  padding: 1.4rem;
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+.depoimento footer {
+  margin-top: 0.8rem;
+  font-weight: 600;
+  color: var(--oliva);
+}
+
+/* ---------- Formulários (login e cadastro) ---------- */
+.pagina-form {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  padding: 3rem 0;
+  background:
+    linear-gradient(rgba(247, 240, 230, 0.9), rgba(247, 240, 230, 0.9)),
+    repeating-linear-gradient(45deg, var(--areia) 0 10px, var(--creme) 10px 20px);
+}
+
+.form-caixa {
+  background: var(--branco);
+  width: min(480px, 92%);
+  padding: 2.4rem;
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+.form-caixa h1 {
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+}
+
+.form-caixa > p {
+  color: var(--oliva-claro);
+  margin-bottom: 1.5rem;
+}
+
+.campo {
+  margin-bottom: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.campo label {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.campo input,
+.campo select {
+  padding: 0.75rem 0.9rem;
+  border: 1.5px solid var(--areia);
+  border-radius: 10px;
+  font: inherit;
+  background: var(--creme);
+}
+
+.campo input:focus,
+.campo select:focus {
+  outline: 3px solid rgba(181, 83, 47, 0.3);
+  border-color: var(--terracota);
+}
+
+.linha-dupla {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.check {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+}
+
+.form-caixa .btn {
+  width: 100%;
+  font-size: 1rem;
+}
+
+.form-rodape {
+  text-align: center;
+  margin-top: 1.2rem;
+  font-size: 0.92rem;
+}
+
+.form-rodape a {
+  color: var(--terracota);
+  font-weight: 600;
+}
+
+/* ---------- Tabela (guia de medidas) ---------- */
+.tabela-wrap {
+  overflow-x: auto;
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--branco);
+  min-width: 520px;
+}
+
+caption {
+  font-family: var(--fonte-titulo);
+  font-size: 1.3rem;
+  padding: 1rem;
+  background: var(--oliva);
+  color: var(--creme);
+  text-align: left;
+}
+
+th, td {
+  padding: 0.85rem 1rem;
+  text-align: center;
+}
+
+thead th {
+  background: var(--areia);
+  color: var(--oliva);
+}
+
+tbody tr:nth-child(even) {
+  background: var(--creme);
+}
+
+/* ---------- Título de página interna ---------- */
+.topo-pagina {
+  background: var(--oliva);
+  color: var(--creme);
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.topo-pagina h1 {
+  color: var(--creme);
+}
+
+/* ---------- Rodapé ---------- */
+.site-footer {
+  background: var(--oliva);
+  color: var(--creme);
+  padding: 3rem 0 1.5rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.site-footer h3 {
+  color: var(--areia);
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.site-footer li {
+  margin-bottom: 0.4rem;
+}
+
+.site-footer a:hover {
+  color: var(--terracota);
+}
+
+.copyright {
+  border-top: 1px solid rgba(247, 240, 230, 0.25);
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* ==========================================================
+   Responsividade (Media Queries)
+   ========================================================== */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero p {
+    margin-inline: auto;
+  }
+
+  .hero-arte {
+    max-width: 320px;
+    margin-inline: auto;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Celulares */
+@media (max-width: 640px) {
+  /* Cabeçalho empilhado: logo em cima, links embaixo */
+  .site-header {
+    position: static;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem 1.2rem;
+  }
+
+  .hero {
+    padding: 3rem 0;
+  }
+
+  .hero .btn-outline {
+    margin: 0.8rem 0 0;
+  }
+
+  .linha-dupla {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-caixa {
+    padding: 1.6rem;
+  }
+}
+
+/* ==========================================================
+   Acréscimos da versão MVC (PHP)
+   ========================================================== */
+
+/* ---------- Alertas de formulário ---------- */
+.alerta {
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.2rem;
+  font-size: 0.92rem;
+}
+
+.alerta-erro {
+  background: #f8e1da;
+  color: #7a2a12;
+  border: 1px solid #e3b3a2;
+}
+
+.alerta-ok {
+  background: #e3ebdc;
+  color: #2f3a2b;
+  border: 1px solid #b9c9ad;
+}
+
+/* ---------- Tamanhos e cores nos cards ---------- */
+.tamanhos,
+.cores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.5rem;
+  font-size: 0.82rem;
+}
+
+.tamanhos li {
+  border: 1.5px solid var(--areia);
+  border-radius: 6px;
+  padding: 0 0.45rem;
+  font-weight: 600;
+  color: var(--oliva);
+}
+
+.cores li {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--oliva-claro);
+}
+
+.amostra {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid rgba(47, 58, 43, 0.35);
+  display: inline-block;
+}
+
+/* ---------- Botão e link de ação perigosa ---------- */
+.btn-perigo {
+  background: #a02a14;
+  border-color: #a02a14;
+}
+
+.btn-perigo:hover {
+  background: #7a2010;
+  border-color: #7a2010;
+}
+
+.link-perigo {
+  color: #a02a14;
+  font-weight: 600;
+}
+
+.acoes {
+  white-space: nowrap;
+}
+
+.acoes a {
+  color: var(--terracota);
+  font-weight: 600;
+}
+
+.acoes a.link-perigo {
+  color: #a02a14;
+}
+
+/* ---------- Painel e dados do cliente ---------- */
+.categoria-card .btn {
+  margin-top: 0.8rem;
+  padding: 0.6rem 1.2rem;
+}
+
+.dados-cliente {
+  margin-top: 2.5rem;
+  background: var(--branco);
+  padding: 1.6rem;
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+.dados-cliente h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.dados-cliente dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem 1.2rem;
+}
+
+.dados-cliente dt {
+  font-weight: 600;
+  color: var(--oliva);
+}
+
+/* Botão dentro do título das páginas internas */
+.topo-pagina .btn {
+  margin-top: 0.5rem;
+}

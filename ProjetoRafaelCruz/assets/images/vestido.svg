@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Vestido">
+  <path d="M78 24 L90 24 L100 44 L110 24 L122 24 L128 74 L116 96 L162 176 L38 176 L84 96 L72 74 Z" fill="#b5532f" stroke="#2f3a2b" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M84 96 L116 96" stroke="#2f3a2b" stroke-width="4"/>
+  <path d="M60 140 Q100 156 140 140" fill="none" stroke="#f7f0e6" stroke-width="3" opacity=".7"/>
+</svg>
